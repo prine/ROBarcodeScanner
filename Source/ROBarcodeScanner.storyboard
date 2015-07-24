@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pFx-BT-zJm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ayp-hU-CXp">
+            <objects>
+                <navigationController id="pFx-BT-zJm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dK4-Av-R1q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bxo-5K-Tdo" kind="relationship" relationship="rootViewController" id="TaU-CP-b6J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IE-3W-vbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="240"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wd6-G5-gmx">
+            <objects>
+                <viewController id="Bxo-5K-Tdo" customClass="ViewController" customModule="ROBarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EPa-3S-TFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ziJ-uF-Vt4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1i6-JI-MmH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-rl-gl2">
+                                <rect key="frame" x="16" y="249" width="568" height="101"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="47"/>
+                                <state key="normal" title="SCAN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanClicked" destination="Bxo-5K-Tdo" eventType="touchUpInside" id="Y13-2W-cQ6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-Z7-wvR">
+                                <rect key="frame" x="16" y="329" width="568" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ogs-rl-gl2" firstAttribute="top" secondItem="EPa-3S-TFx" secondAttribute="bottom" constant="185" id="97p-bZ-3CV"/>
+                            <constraint firstItem="Ogs-rl-gl2" firstAttribute="trailing" secondItem="1SK-Z7-wvR" secondAttribute="trailing" id="Akf-ir-atk"/>
+                            <constraint firstItem="Ogs-rl-gl2" firstAttribute="bottom" secondItem="1SK-Z7-wvR" secondAttribute="bottom" id="Sh3-ni-RwR"/>
+                            <constraint firstItem="ziJ-uF-Vt4" firstAttribute="top" secondItem="Ogs-rl-gl2" secondAttribute="bottom" constant="250" id="UCt-t7-OYy"/>
+                            <constraint firstItem="1SK-Z7-wvR" firstAttribute="leading" secondItem="Ogs-rl-gl2" secondAttribute="leading" id="XFg-5v-RSp"/>
+                            <constraint firstItem="1SK-Z7-wvR" firstAttribute="leading" secondItem="1i6-JI-MmH" secondAttribute="leadingMargin" id="dih-eQ-s3W"/>
+                            <constraint firstItem="1SK-Z7-wvR" firstAttribute="trailing" secondItem="1i6-JI-MmH" secondAttribute="trailingMargin" id="jSh-fY-pql"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mih-eq-2VO"/>
+                    <connections>
+                        <outlet property="scanButton" destination="Ogs-rl-gl2" id="po3-i8-RRt"/>
+                        <outlet property="scanResult" destination="1SK-Z7-wvR" id="DNs-IL-yj6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mE-2J-Yfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="240"/>
+        </scene>
+        <!--Barcode Scanner View Controller-->
+        <scene sceneID="NmA-eK-wZU">
+            <objects>
+                <viewController storyboardIdentifier="ROBarcodeScannerViewControllerScene" id="upt-dA-bwu" customClass="ROBarcodeScannerViewController" customModule="ROBarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZXA-tk-ESo"/>
+                        <viewControllerLayoutGuide type="bottom" id="kmj-Iv-XJu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xUh-U2-jvu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrK-4r-qSU">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="mrK-4r-qSU" firstAttribute="leading" secondItem="xUh-U2-jvu" secondAttribute="leading" id="LtA-x2-96L"/>
+                            <constraint firstAttribute="trailing" secondItem="mrK-4r-qSU" secondAttribute="trailing" id="fKc-JC-h04"/>
+                            <constraint firstItem="mrK-4r-qSU" firstAttribute="top" secondItem="ZXA-tk-ESo" secondAttribute="bottom" constant="540" id="lF9-7Y-BJ5"/>
+                            <constraint firstItem="mrK-4r-qSU" firstAttribute="bottom" secondItem="kmj-Iv-XJu" secondAttribute="top" id="trS-Z5-Xd6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nr0-Ag-SMf"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="mrK-4r-qSU" id="WeM-rN-vfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P89-u8-sW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="240"/>
+        </scene>
+    </scenes>
+</document>

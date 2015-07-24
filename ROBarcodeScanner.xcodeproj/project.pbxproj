@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CBD062321B6233ED002A5F18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062311B6233ED002A5F18 /* AppDelegate.swift */; };
-		CBD062341B6233ED002A5F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062331B6233ED002A5F18 /* ViewController.swift */; };
-		CBD062371B6233ED002A5F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD062351B6233ED002A5F18 /* Main.storyboard */; };
 		CBD062391B6233ED002A5F18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD062381B6233ED002A5F18 /* Images.xcassets */; };
 		CBD0623C1B6233ED002A5F18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */; };
 		CBD062481B6233ED002A5F18 /* ROBarcodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062471B6233ED002A5F18 /* ROBarcodeScannerTests.swift */; };
+		CBD062541B626BFE002A5F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062531B626BFE002A5F18 /* ViewController.swift */; };
+		CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CBD062571B6282D7002A5F18 /* LICENSE */; };
+		CBD0625B1B6282D7002A5F18 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CBD062581B6282D7002A5F18 /* README.md */; };
+		CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */; };
+		CBD062601B6287DC002A5F18 /* ROBarcodeScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */; };
+		CBD062611B6287DC002A5F18 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		CBD0622C1B6233ED002A5F18 /* ROBarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROBarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD062301B6233ED002A5F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD062311B6233ED002A5F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBD062331B6233ED002A5F18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBD062361B6233ED002A5F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBD062381B6233ED002A5F18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBD0623B1B6233ED002A5F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CBD062411B6233ED002A5F18 /* ROBarcodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROBarcodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD062461B6233ED002A5F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD062471B6233ED002A5F18 /* ROBarcodeScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROBarcodeScannerTests.swift; sourceTree = "<group>"; };
+		CBD062531B626BFE002A5F18 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBD062571B6282D7002A5F18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CBD062581B6282D7002A5F18 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ROBarcodeScanner.podspec; sourceTree = "<group>"; };
+		CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ROBarcodeScanner.storyboard; path = Source/ROBarcodeScanner.storyboard; sourceTree = SOURCE_ROOT; };
+		CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ROBarcodeScannerViewController.swift; path = Source/ROBarcodeScannerViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,9 @@
 		CBD062231B6233ED002A5F18 = {
 			isa = PBXGroup;
 			children = (
+				CBD062571B6282D7002A5F18 /* LICENSE */,
+				CBD062581B6282D7002A5F18 /* README.md */,
+				CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */,
 				CBD0622E1B6233ED002A5F18 /* ROBarcodeScanner */,
 				CBD062441B6233ED002A5F18 /* ROBarcodeScannerTests */,
 				CBD0622D1B6233ED002A5F18 /* Products */,
@@ -78,10 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				CBD062311B6233ED002A5F18 /* AppDelegate.swift */,
-				CBD062331B6233ED002A5F18 /* ViewController.swift */,
-				CBD062351B6233ED002A5F18 /* Main.storyboard */,
+				CBD062531B626BFE002A5F18 /* ViewController.swift */,
 				CBD062381B6233ED002A5F18 /* Images.xcassets */,
 				CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */,
+				CBD0625D1B6287C1002A5F18 /* Source */,
 				CBD0622F1B6233ED002A5F18 /* Supporting Files */,
 			);
 			path = ROBarcodeScanner;
@@ -110,6 +121,15 @@
 				CBD062461B6233ED002A5F18 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD0625D1B6287C1002A5F18 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */,
+				CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +181,7 @@
 				TargetAttributes = {
 					CBD0622B1B6233ED002A5F18 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = PKS2D9PECG;
 					};
 					CBD062401B6233ED002A5F18 = {
 						CreatedOnToolsVersion = 6.4;
@@ -192,8 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD062371B6233ED002A5F18 /* Main.storyboard in Resources */,
 				CBD0623C1B6233ED002A5F18 /* LaunchScreen.xib in Resources */,
+				CBD062601B6287DC002A5F18 /* ROBarcodeScanner.storyboard in Resources */,
+				CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */,
+				CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */,
 				CBD062391B6233ED002A5F18 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD062341B6233ED002A5F18 /* ViewController.swift in Sources */,
+				CBD062541B626BFE002A5F18 /* ViewController.swift in Sources */,
+				CBD062611B6287DC002A5F18 /* ROBarcodeScannerViewController.swift in Sources */,
 				CBD062321B6233ED002A5F18 /* AppDelegate.swift in Sources */,
+				CBD0625B1B6282D7002A5F18 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +261,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CBD062351B6233ED002A5F18 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBD062361B6233ED002A5F18 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ROBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ROBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
