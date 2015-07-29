@@ -17,6 +17,7 @@
 		CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */; };
 		CBD062601B6287DC002A5F18 /* ROBarcodeScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */; };
 		CBD062611B6287DC002A5F18 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */; };
+		CBD062631B68C5DC002A5F18 /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD062621B68C5DC002A5F18 /* Screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ROBarcodeScanner.podspec; sourceTree = "<group>"; };
 		CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ROBarcodeScanner.storyboard; path = Source/ROBarcodeScanner.storyboard; sourceTree = SOURCE_ROOT; };
 		CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ROBarcodeScannerViewController.swift; path = Source/ROBarcodeScannerViewController.swift; sourceTree = SOURCE_ROOT; };
+		CBD062621B68C5DC002A5F18 /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				CBD062571B6282D7002A5F18 /* LICENSE */,
 				CBD062581B6282D7002A5F18 /* README.md */,
 				CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */,
+				CBD062621B68C5DC002A5F18 /* Screenshot.png */,
 				CBD0622E1B6233ED002A5F18 /* ROBarcodeScanner */,
 				CBD062441B6233ED002A5F18 /* ROBarcodeScannerTests */,
 				CBD0622D1B6233ED002A5F18 /* Products */,
@@ -218,6 +221,7 @@
 				CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */,
 				CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */,
 				CBD062391B6233ED002A5F18 /* Images.xcassets in Resources */,
+				CBD062631B68C5DC002A5F18 /* Screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +434,7 @@
 				CBD0624D1B6233ED002A5F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBD0624E1B6233ED002A5F18 /* Build configuration list for PBXNativeTarget "ROBarcodeScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +443,7 @@
 				CBD062501B6233ED002A5F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

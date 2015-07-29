@@ -11,7 +11,7 @@
 import UIKit
 import AVFoundation
 
-class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var messageLabel:UILabel!
     
@@ -35,7 +35,7 @@ class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputO
         AVMetadataObjectTypeQRCode,
         AVMetadataObjectTypeAztecCode]
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         // Retrieve the default capturing device for using the camera
@@ -88,7 +88,7 @@ class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputO
         view.bringSubviewToFront(qrCodeFrameView!)
     }
     
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+    public func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
@@ -112,7 +112,7 @@ class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputO
         }
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.navigationController?.popViewControllerAnimated(true)
         
         if let barcodeScannedTemp = barcodeScanned, lastCapturedCodeTemp = lastCapturedCode  {
@@ -121,7 +121,7 @@ class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputO
         }
     }
 
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }

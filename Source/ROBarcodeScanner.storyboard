@@ -21,9 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-473" y="240"/>
         </scene>
-        <!--View Controller-->
+        <!--ROBarcodeScanner-->
         <scene sceneID="Wd6-G5-gmx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mE-2J-Yfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Bxo-5K-Tdo" customClass="ViewController" customModule="ROBarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EPa-3S-TFx"/>
@@ -43,7 +44,7 @@
                                     <action selector="scanClicked" destination="Bxo-5K-Tdo" eventType="touchUpInside" id="Y13-2W-cQ6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-Z7-wvR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show the scan result here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-Z7-wvR">
                                 <rect key="frame" x="16" y="329" width="568" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -61,17 +62,16 @@
                             <constraint firstItem="1SK-Z7-wvR" firstAttribute="trailing" secondItem="1i6-JI-MmH" secondAttribute="trailingMargin" id="jSh-fY-pql"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mih-eq-2VO"/>
+                    <navigationItem key="navigationItem" title="ROBarcodeScanner" id="mih-eq-2VO"/>
                     <connections>
                         <outlet property="scanButton" destination="Ogs-rl-gl2" id="po3-i8-RRt"/>
                         <outlet property="scanResult" destination="1SK-Z7-wvR" id="DNs-IL-yj6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0mE-2J-Yfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="635" y="240"/>
         </scene>
-        <!--Barcode Scanner View Controller-->
+        <!--ROBarcodeScanner-->
         <scene sceneID="NmA-eK-wZU">
             <objects>
                 <viewController storyboardIdentifier="ROBarcodeScannerViewControllerScene" id="upt-dA-bwu" customClass="ROBarcodeScannerViewController" customModule="ROBarcodeScanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,8 @@
                             <constraint firstItem="mrK-4r-qSU" firstAttribute="bottom" secondItem="kmj-Iv-XJu" secondAttribute="top" id="trS-Z5-Xd6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nr0-Ag-SMf"/>
+                    <navigationItem key="navigationItem" title="ROBarcodeScanner" id="Nr0-Ag-SMf"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="messageLabel" destination="mrK-4r-qSU" id="WeM-rN-vfK"/>
                     </connections>
