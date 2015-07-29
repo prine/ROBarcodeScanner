@@ -12,7 +12,25 @@ pod "ROBarcodeScanner"
 
 ## How to use
 
-TODO
+The ROBarcodeScannerViewController is a predefined view for the scanning. It shows the video and a result label on the bottom of the screen. When it detects an accepted barcode it does mark the barcode in the video window with green.
+
+![ROBarcodeScanner Example](https://raw.githubusercontent.com/prine/ROBarcodeScanner/master/Screenshot.png)
+
+```swift
+var barcodeScanner:ROBarcodeScannerViewController?
+
+// Define the callback which handles the returned result
+barcodeScanner?.barcodeScanned = { (barcode:String) in
+    // The scanned result can be fetched here
+    println("Barcode scanned: \(barcode)")
+}
+
+// Push the view
+if let barcodeScanner = self.barcodeScanner {
+    self.navigationController?.pushViewController(barcodeScanner, animated: true)
+}
+
+```
 
 ## License
 
