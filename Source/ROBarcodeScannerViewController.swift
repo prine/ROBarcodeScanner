@@ -22,7 +22,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
     
     var lastCapturedCode:String?
     
-    var barcodeScanned:((String) -> ())?
+    public var barcodeScanned:((String) -> ())?
     
     private var allowedTypes = [AVMetadataObjectTypeUPCECode,
         AVMetadataObjectTypeCode39Code,
