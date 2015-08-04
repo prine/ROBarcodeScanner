@@ -1,5 +1,5 @@
 # ROBarcodeScanner
-Scans different Barcodes and returns the result as String
+Scans different Barcodes and returns the result as String. Inspired by the Tutorial from Appcoda: [AppCoda](http://www.appcoda.com/qr-code-reader-swift/).
 
 ## Installation
 
