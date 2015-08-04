@@ -14,6 +14,7 @@ import AVFoundation
 public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var messageLabel:UILabel!
+    @IBOutlet weak var videoView:UIView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -66,8 +67,8 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResize
-        videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer)
+        videoPreviewLayer?.frame = videoView.layer.bounds
+        videoView.layer.addSublayer(videoPreviewLayer)
         
         // Start video capture.
         captureSession?.startRunning()
@@ -77,7 +78,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
-        qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
+        qrCodeFrameView?.layer.borderColor = UIColor.redColor().CGColor
         qrCodeFrameView?.layer.borderWidth = 2
         qrCodeFrameView?.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin |
                                             UIViewAutoresizing.FlexibleBottomMargin |
@@ -86,6 +87,39 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)
+    }
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        videoPreviewLayer?.frame = self.videoView.layer.bounds
+        
+        var orientation = UIApplication.sharedApplication().statusBarOrientation
+        
+        switch(orientation) {
+        case UIInterfaceOrientation.LandscapeLeft:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
+            
+        case UIInterfaceOrientation.LandscapeRight:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.LandscapeRight
+            
+        case UIInterfaceOrientation.Portrait:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.Portrait
+            
+        case UIInterfaceOrientation.PortraitUpsideDown:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.PortraitUpsideDown
+            
+        default:
+            println("Unknown orientation state")
+        }
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        
+    }
+    
+    public override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        videoPreviewLayer?.frame = videoView.layer.bounds
     }
     
     public func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
@@ -103,6 +137,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         if contains(self.allowedTypes, metadataObj.type) {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+            
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
