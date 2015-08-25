@@ -12,7 +12,7 @@ pod "ROBarcodeScanner"
 
 ## How to use
 
-The ROBarcodeScannerViewController is a predefined view for the scanning. It shows the video and a result label on the bottom of the screen. When it detects an accepted barcode it does mark the barcode in the video window with green.
+The ROBarcodeScannerViewController is a predefined view for the scanning. It shows the video and a result label on the bottom of the screen. When it detects an accepted barcode it does mark the barcode in the video window with green border. With a tap on the screen the user can confirm that the correct barcode was scanned and the callback is called.
 
 ![ROBarcodeScanner Example](https://raw.githubusercontent.com/prine/ROBarcodeScanner/master/Screenshot.png)
 
