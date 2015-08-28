@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBAction func scanClicked() {
         barcodeScanner?.barcodeScanned = { (barcode:String) in
             self.navigationController?.popViewControllerAnimated(true)
-            println("Received following barcode: \(barcode)")
+            print("Received following barcode: \(barcode)")
 
             dispatch_async(dispatch_get_main_queue(),{
                 self.scanResult.text = "\(barcode)"

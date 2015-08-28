@@ -13,7 +13,6 @@
 		CBD062481B6233ED002A5F18 /* ROBarcodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062471B6233ED002A5F18 /* ROBarcodeScannerTests.swift */; };
 		CBD062541B626BFE002A5F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062531B626BFE002A5F18 /* ViewController.swift */; };
 		CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CBD062571B6282D7002A5F18 /* LICENSE */; };
-		CBD0625B1B6282D7002A5F18 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CBD062581B6282D7002A5F18 /* README.md */; };
 		CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CBD062591B6282D7002A5F18 /* ROBarcodeScanner.podspec */; };
 		CBD062601B6287DC002A5F18 /* ROBarcodeScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD0625E1B6287DC002A5F18 /* ROBarcodeScanner.storyboard */; };
 		CBD062611B6287DC002A5F18 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0625F1B6287DC002A5F18 /* ROBarcodeScannerViewController.swift */; };
@@ -179,6 +178,8 @@
 		CBD062241B6233ED002A5F18 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "RASCOR International AG";
 				TargetAttributes = {
@@ -242,7 +243,6 @@
 				CBD062541B626BFE002A5F18 /* ViewController.swift in Sources */,
 				CBD062611B6287DC002A5F18 /* ROBarcodeScannerViewController.swift in Sources */,
 				CBD062321B6233ED002A5F18 /* AppDelegate.swift in Sources */,
-				CBD0625B1B6282D7002A5F18 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

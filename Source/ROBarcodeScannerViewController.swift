@@ -44,11 +44,17 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         // Get an instance of the AVCaptureDeviceInput class using the previous device object.
         var error:NSError?
-        let input: AnyObject! = AVCaptureDeviceInput.deviceInputWithDevice(captureDevice, error: &error)
+        let input: AnyObject!
+        do {
+            input = try AVCaptureDeviceInput(device:captureDevice)
+        } catch let error1 as NSError {
+            error = error1
+            input = nil
+        }
         
         if (error != nil) {
             // If any error occurs, simply log the description of it and don't continue any more.
-            println("\(error?.localizedDescription)")
+            print("\(error?.localizedDescription)")
             return
         }
         
@@ -68,7 +74,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResize
         videoPreviewLayer?.frame = videoView.layer.bounds
-        videoView.layer.addSublayer(videoPreviewLayer)
+        videoView.layer.addSublayer(videoPreviewLayer!)
         
         // Start video capture.
         captureSession?.startRunning()
@@ -80,10 +86,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         qrCodeFrameView = UIView()
         qrCodeFrameView?.layer.borderColor = UIColor.redColor().CGColor
         qrCodeFrameView?.layer.borderWidth = 2
-        qrCodeFrameView?.autoresizingMask = UIViewAutoresizing.FlexibleTopMargin |
-                                            UIViewAutoresizing.FlexibleBottomMargin |
-                                            UIViewAutoresizing.FlexibleLeftMargin |
-                                            UIViewAutoresizing.FlexibleRightMargin
+        qrCodeFrameView?.autoresizingMask = [UIViewAutoresizing.FlexibleTopMargin, UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin]
         
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)
@@ -94,7 +97,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         videoPreviewLayer?.frame = self.videoView.layer.bounds
         
-        var orientation = UIApplication.sharedApplication().statusBarOrientation
+        let orientation = UIApplication.sharedApplication().statusBarOrientation
         
         switch(orientation) {
         case UIInterfaceOrientation.LandscapeLeft:
@@ -110,7 +113,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
             videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.PortraitUpsideDown
             
         default:
-            println("Unknown orientation state")
+            print("Unknown orientation state")
         }
     }
     
@@ -134,7 +137,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
-        if contains(self.allowedTypes, metadataObj.type) {
+        if self.allowedTypes.contains(metadataObj.type) {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             
@@ -147,7 +150,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         }
     }
     
-    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.navigationController?.popViewControllerAnimated(true)
         
         if let barcodeScannedTemp = barcodeScanned, lastCapturedCodeTemp = lastCapturedCode  {
