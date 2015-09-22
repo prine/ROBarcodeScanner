@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "ROBarcodeScanner"
-s.version          = "2.0.0"
+s.version          = "2.0.1"
 s.summary          = "Scans different Barcodes and returns the result as String"
 s.description      = <<-DESC
 Scans different Barcodes and returns the result as String. Use the ROBarcodeScannerViewController for the View.
