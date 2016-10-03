@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "ROBarcodeScanner"
-s.version          = "2.0.1"
+s.version          = "2.1.0"
 s.summary          = "Scans different Barcodes and returns the result as String"
 s.description      = <<-DESC
 Scans different Barcodes and returns the result as String. Use the ROBarcodeScannerViewController for the View.
@@ -32,6 +32,6 @@ s.resource_bundles = {
 s.resources = ["Source/*.Storyboard"]
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
+s.frameworks = 'UIKit', 'AVFoundation'
 # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DC8B9BA8-83DC-4128-ACC6-7FFB6FE15FFD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ROBarcodeScanner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7F24851518C96AF132B9FA4F115D3B7952186574</key>
+		<string>https://github.com/prine/ROBarcodeScanner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ROBarcodeScanner.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7F24851518C96AF132B9FA4F115D3B7952186574</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/prine/ROBarcodeScanner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7F24851518C96AF132B9FA4F115D3B7952186574</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7F24851518C96AF132B9FA4F115D3B7952186574</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ROBarcodeScanner</string>
+		</dict>
+	</array>
+</dict>
+</plist>

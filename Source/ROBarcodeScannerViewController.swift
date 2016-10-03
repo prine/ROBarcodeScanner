@@ -40,7 +40,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         super.viewDidLoad()
         
         // Retrieve the default capturing device for using the camera
-        self.captureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        self.captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
         // Get an instance of the AVCaptureDeviceInput class using the previous device object.
         var error:NSError?
@@ -67,7 +67,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         captureSession?.addOutput(captureMetadataOutput)
         
         // Set delegate and use the default dispatch queue to execute the call back
-        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         captureMetadataOutput.metadataObjectTypes = self.allowedTypes
         
         // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
@@ -80,16 +80,16 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         captureSession?.startRunning()
         
         // Move the message label to the top view
-        view.bringSubviewToFront(messageLabel)
+        view.bringSubview(toFront: messageLabel)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
-        qrCodeFrameView?.layer.borderColor = UIColor.redColor().CGColor
+        qrCodeFrameView?.layer.borderColor = UIColor.red.cgColor
         qrCodeFrameView?.layer.borderWidth = 2
-        qrCodeFrameView?.autoresizingMask = [UIViewAutoresizing.FlexibleTopMargin, UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin]
+        qrCodeFrameView?.autoresizingMask = [UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin, UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin]
         
         view.addSubview(qrCodeFrameView!)
-        view.bringSubviewToFront(qrCodeFrameView!)
+        view.bringSubview(toFront:qrCodeFrameView!)
     }
     
     public override func viewWillLayoutSubviews() {
@@ -97,20 +97,20 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         videoPreviewLayer?.frame = self.videoView.layer.bounds
         
-        let orientation = UIApplication.sharedApplication().statusBarOrientation
+        let orientation = UIApplication.shared.statusBarOrientation
         
         switch(orientation) {
-        case UIInterfaceOrientation.LandscapeLeft:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
+        case UIInterfaceOrientation.landscapeLeft:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
             
-        case UIInterfaceOrientation.LandscapeRight:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.LandscapeRight
+        case UIInterfaceOrientation.landscapeRight:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
             
-        case UIInterfaceOrientation.Portrait:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.Portrait
+        case UIInterfaceOrientation.portrait:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
             
-        case UIInterfaceOrientation.PortraitUpsideDown:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.PortraitUpsideDown
+        case UIInterfaceOrientation.portraitUpsideDown:
+            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
             
         default:
             print("Unknown orientation state")
@@ -121,15 +121,15 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
     }
     
-    public override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+    public override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         videoPreviewLayer?.frame = videoView.layer.bounds
     }
     
-    public func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+    public func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
-            qrCodeFrameView?.frame = CGRectZero
+            qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR code is detected"
             return
         }
@@ -139,21 +139,23 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         if self.allowedTypes.contains(metadataObj.type) {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
                 lastCapturedCode = metadataObj.stringValue
+                
+                print("Scanned barcode: \(metadataObj.stringValue)")
             }
         }
     }
     
-    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.navigationController?.popViewControllerAnimated(true)
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        _ = self.navigationController?.popViewController(animated: true)
         
-        if let barcodeScannedTemp = barcodeScanned, lastCapturedCodeTemp = lastCapturedCode  {
+        if let barcodeScannedTemp = barcodeScanned, let lastCapturedCodeTemp = lastCapturedCode  {
             // Notify via callback
             barcodeScannedTemp(lastCapturedCodeTemp)
         }

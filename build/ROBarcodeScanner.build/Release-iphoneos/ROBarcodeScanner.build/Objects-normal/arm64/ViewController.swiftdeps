@@ -1,0 +1,448 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "C16ROBarcodeScanner14ViewController"
+provides-member:
+- ["C16ROBarcodeScanner14ViewController", ""]
+provides-dynamic-lookup:
+- "barcodeScanner"
+- "scanResult"
+- "scanClicked"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "scanButton"
+depends-top-level:
+- "ViewController"
+- !private "StringLiteralType"
+- !private "String"
+- !private "print"
+- "UILabel"
+- "UIButton"
+- "BooleanLiteralType"
+- !private "dispatch_get_main_queue"
+- !private "dispatch_async"
+- "ROBarcodeScannerViewController"
+- "UIViewController"
+depends-member:
+- !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "barcodeScanned"]
+- !private ["PSs9AnyObject", "barcodeScanned"]
+- ["PSs9AnyObject", "barcodeScanner"]
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- !private ["PSs9AnyObject", "dispatch_async"]
+- !private ["PSs9AnyObject", "dispatch_get_main_queue"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9AnyObject", "navigationController"]
+- !private ["PSs9AnyObject", "popViewControllerAnimated"]
+- !private ["PSs9AnyObject", "print"]
+- !private ["PSs9AnyObject", "pushViewController"]
+- ["PSs9AnyObject", "scanButton"]
+- ["PSs9AnyObject", "scanClicked"]
+- ["PSs9AnyObject", "scanResult"]
+- !private ["PSs9AnyObject", "storyboard"]
+- !private ["PSs9AnyObject", "text"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- !private ["Sb", "deinit"]
+- !private ["PSs11CVarArgType", "barcodeScanned"]
+- ["PSs11CVarArgType", "barcodeScanner"]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- !private ["PSs11CVarArgType", "dispatch_async"]
+- !private ["PSs11CVarArgType", "dispatch_get_main_queue"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs11CVarArgType", "navigationController"]
+- !private ["PSs11CVarArgType", "popViewControllerAnimated"]
+- !private ["PSs11CVarArgType", "print"]
+- !private ["PSs11CVarArgType", "pushViewController"]
+- ["PSs11CVarArgType", "scanButton"]
+- ["PSs11CVarArgType", "scanClicked"]
+- ["PSs11CVarArgType", "scanResult"]
+- !private ["PSs11CVarArgType", "storyboard"]
+- !private ["PSs11CVarArgType", "text"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- !private ["VSs9Character", "deinit"]
+- !private ["PSs10Comparable", "init"]
+- ["PSs28CustomDebugStringConvertible", "Some"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "barcodeScanned"]
+- ["PSs23CustomStringConvertible", "barcodeScanner"]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["PSs23CustomStringConvertible", "dispatch_async"]
+- !private ["PSs23CustomStringConvertible", "dispatch_get_main_queue"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs23CustomStringConvertible", "navigationController"]
+- !private ["PSs23CustomStringConvertible", "popViewControllerAnimated"]
+- !private ["PSs23CustomStringConvertible", "print"]
+- !private ["PSs23CustomStringConvertible", "pushViewController"]
+- ["PSs23CustomStringConvertible", "scanButton"]
+- ["PSs23CustomStringConvertible", "scanClicked"]
+- ["PSs23CustomStringConvertible", "scanResult"]
+- !private ["PSs23CustomStringConvertible", "storyboard"]
+- !private ["PSs23CustomStringConvertible", "text"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- !private ["PSs9Equatable", "barcodeScanned"]
+- ["PSs9Equatable", "barcodeScanner"]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- !private ["PSs9Equatable", "dispatch_async"]
+- !private ["PSs9Equatable", "dispatch_get_main_queue"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs9Equatable", "navigationController"]
+- !private ["PSs9Equatable", "popViewControllerAnimated"]
+- !private ["PSs9Equatable", "print"]
+- !private ["PSs9Equatable", "pushViewController"]
+- ["PSs9Equatable", "scanButton"]
+- ["PSs9Equatable", "scanClicked"]
+- ["PSs9Equatable", "scanResult"]
+- !private ["PSs9Equatable", "storyboard"]
+- !private ["PSs9Equatable", "text"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["PSs8Hashable", "barcodeScanned"]
+- ["PSs8Hashable", "barcodeScanner"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- !private ["PSs8Hashable", "dispatch_async"]
+- !private ["PSs8Hashable", "dispatch_get_main_queue"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "instantiateViewControllerWithIdentifier"]
+- !private ["PSs8Hashable", "navigationController"]
+- !private ["PSs8Hashable", "popViewControllerAnimated"]
+- !private ["PSs8Hashable", "print"]
+- !private ["PSs8Hashable", "pushViewController"]
+- ["PSs8Hashable", "scanButton"]
+- ["PSs8Hashable", "scanClicked"]
+- ["PSs8Hashable", "scanResult"]
+- !private ["PSs8Hashable", "storyboard"]
+- !private ["PSs8Hashable", "text"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- !private ["SQ", "deinit"]
+- !private ["Si", "deinit"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "deinit"]
+- !private ["VSs4Int8", "deinit"]
+- !private ["PSs14MirrorPathType", "init"]
+- !private ["PSo8NSCoding", "barcodeScanned"]
+- ["PSo8NSCoding", "barcodeScanner"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "dispatch_async"]
+- !private ["PSo8NSCoding", "dispatch_get_main_queue"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "popViewControllerAnimated"]
+- !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "pushViewController"]
+- ["PSo8NSCoding", "scanButton"]
+- ["PSo8NSCoding", "scanClicked"]
+- ["PSo8NSCoding", "scanResult"]
+- !private ["PSo8NSCoding", "storyboard"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "barcodeScanned"]
+- ["PSo26NSExtensionRequestHandling", "barcodeScanner"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "dispatch_async"]
+- !private ["PSo26NSExtensionRequestHandling", "dispatch_get_main_queue"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "popViewControllerAnimated"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
+- !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
+- ["PSo26NSExtensionRequestHandling", "scanButton"]
+- ["PSo26NSExtensionRequestHandling", "scanClicked"]
+- ["PSo26NSExtensionRequestHandling", "scanResult"]
+- !private ["PSo26NSExtensionRequestHandling", "storyboard"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "ROBarcodeScannerViewController"]
+- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "barcodeScanned"]
+- ["CSo8NSObject", "barcodeScanner"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "dispatch_async"]
+- !private ["CSo8NSObject", "dispatch_get_main_queue"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
+- !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "popViewControllerAnimated"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "pushViewController"]
+- ["CSo8NSObject", "scanButton"]
+- ["CSo8NSObject", "scanClicked"]
+- ["CSo8NSObject", "scanResult"]
+- !private ["CSo8NSObject", "storyboard"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "barcodeScanned"]
+- ["PSo16NSObjectProtocol", "barcodeScanner"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "dispatch_async"]
+- !private ["PSo16NSObjectProtocol", "dispatch_get_main_queue"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "popViewControllerAnimated"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "pushViewController"]
+- ["PSo16NSObjectProtocol", "scanButton"]
+- ["PSo16NSObjectProtocol", "scanClicked"]
+- ["PSo16NSObjectProtocol", "scanResult"]
+- !private ["PSo16NSObjectProtocol", "storyboard"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- ["PSs21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["PSs16OutputStreamType", "init"]
+- !private ["C16ROBarcodeScanner30ROBarcodeScannerViewController", "barcodeScanned"]
+- !private ["PSs10Streamable", "init"]
+- !private ["SS", "init"]
+- !private ["PSs30StringInterpolationConvertible", "init"]
+- !private ["PSs24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "barcodeScanned"]
+- ["PSo21UIAppearanceContainer", "barcodeScanner"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "dispatch_async"]
+- !private ["PSo21UIAppearanceContainer", "dispatch_get_main_queue"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "popViewControllerAnimated"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "pushViewController"]
+- ["PSo21UIAppearanceContainer", "scanButton"]
+- ["PSo21UIAppearanceContainer", "scanClicked"]
+- ["PSo21UIAppearanceContainer", "scanResult"]
+- !private ["PSo21UIAppearanceContainer", "storyboard"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "barcodeScanned"]
+- ["PSo18UIContentContainer", "barcodeScanner"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "dispatch_async"]
+- !private ["PSo18UIContentContainer", "dispatch_get_main_queue"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "navigationController"]
+- !private ["PSo18UIContentContainer", "popViewControllerAnimated"]
+- !private ["PSo18UIContentContainer", "print"]
+- !private ["PSo18UIContentContainer", "pushViewController"]
+- ["PSo18UIContentContainer", "scanButton"]
+- ["PSo18UIContentContainer", "scanClicked"]
+- ["PSo18UIContentContainer", "scanResult"]
+- !private ["PSo18UIContentContainer", "storyboard"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo22UINavigationController", "popViewControllerAnimated"]
+- !private ["CSo22UINavigationController", "pushViewController"]
+- ["CSo11UIResponder", "ROBarcodeScannerViewController"]
+- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "barcodeScanned"]
+- ["CSo11UIResponder", "barcodeScanner"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "dispatch_async"]
+- !private ["CSo11UIResponder", "dispatch_get_main_queue"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "popViewControllerAnimated"]
+- !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "pushViewController"]
+- ["CSo11UIResponder", "scanButton"]
+- ["CSo11UIResponder", "scanClicked"]
+- ["CSo11UIResponder", "scanResult"]
+- !private ["CSo11UIResponder", "storyboard"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "barcodeScanned"]
+- ["PSo16UIStateRestoring", "barcodeScanner"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "dispatch_async"]
+- !private ["PSo16UIStateRestoring", "dispatch_get_main_queue"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
+- !private ["PSo16UIStateRestoring", "popViewControllerAnimated"]
+- !private ["PSo16UIStateRestoring", "print"]
+- !private ["PSo16UIStateRestoring", "pushViewController"]
+- ["PSo16UIStateRestoring", "scanButton"]
+- ["PSo16UIStateRestoring", "scanClicked"]
+- ["PSo16UIStateRestoring", "scanResult"]
+- !private ["PSo16UIStateRestoring", "storyboard"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
+- !private ["PSo18UITraitEnvironment", "barcodeScanned"]
+- ["PSo18UITraitEnvironment", "barcodeScanner"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "dispatch_async"]
+- !private ["PSo18UITraitEnvironment", "dispatch_get_main_queue"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "popViewControllerAnimated"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "pushViewController"]
+- ["PSo18UITraitEnvironment", "scanButton"]
+- ["PSo18UITraitEnvironment", "scanClicked"]
+- ["PSo18UITraitEnvironment", "scanResult"]
+- !private ["PSo18UITraitEnvironment", "storyboard"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "ROBarcodeScannerViewController"]
+- !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "UILabel"]
+- !private ["CSo16UIViewController", "barcodeScanned"]
+- ["CSo16UIViewController", "barcodeScanner"]
+- !private ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- !private ["CSo16UIViewController", "dispatch_async"]
+- !private ["CSo16UIViewController", "dispatch_get_main_queue"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "navigationController"]
+- !private ["CSo16UIViewController", "popViewControllerAnimated"]
+- !private ["CSo16UIViewController", "print"]
+- !private ["CSo16UIViewController", "pushViewController"]
+- ["CSo16UIViewController", "scanButton"]
+- ["CSo16UIViewController", "scanClicked"]
+- ["CSo16UIViewController", "scanResult"]
+- !private ["CSo16UIViewController", "storyboard"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "deinit"]
+- !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- ["C16ROBarcodeScanner14ViewController", "ROBarcodeScannerViewController"]
+- !private ["C16ROBarcodeScanner14ViewController", "String"]
+- ["C16ROBarcodeScanner14ViewController", "UIButton"]
+- ["C16ROBarcodeScanner14ViewController", "UILabel"]
+- ["C16ROBarcodeScanner14ViewController", "barcodeScanner"]
+- ["C16ROBarcodeScanner14ViewController", "deinit"]
+- ["C16ROBarcodeScanner14ViewController", "didReceiveMemoryWarning"]
+- !private ["C16ROBarcodeScanner14ViewController", "dispatch_async"]
+- !private ["C16ROBarcodeScanner14ViewController", "dispatch_get_main_queue"]
+- ["C16ROBarcodeScanner14ViewController", "init"]
+- !private ["C16ROBarcodeScanner14ViewController", "navigationController"]
+- !private ["C16ROBarcodeScanner14ViewController", "print"]
+- ["C16ROBarcodeScanner14ViewController", "scanButton"]
+- ["C16ROBarcodeScanner14ViewController", "scanClicked"]
+- ["C16ROBarcodeScanner14ViewController", "scanResult"]
+- !private ["C16ROBarcodeScanner14ViewController", "storyboard"]
+- ["C16ROBarcodeScanner14ViewController", "viewDidLoad"]
+- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs16_CocoaStringType", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- ["PSs12_Reflectable", "Some"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "text"]
+depends-nominal:
+- !private "PSo38AVCaptureMetadataOutputObjectsDelegate"
+- "PSs9AnyObject"
+- !private "Sb"
+- "PSs11CVarArgType"
+- !private "VSs9Character"
+- !private "PSs10Comparable"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- !private "Sd"
+- "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- "PSs8Hashable"
+- !private "SQ"
+- !private "Si"
+- !private "VSs5Int16"
+- !private "VSs5Int32"
+- !private "VSs5Int64"
+- !private "VSs4Int8"
+- !private "PSs14MirrorPathType"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "PSs21NilLiteralConvertible"
+- "Sq"
+- !private "PSs16OutputStreamType"
+- !private "C16ROBarcodeScanner30ROBarcodeScannerViewController"
+- !private "PSs10Streamable"
+- !private "SS"
+- !private "PSs30StringInterpolationConvertible"
+- !private "PSs24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "CSo7UILabel"
+- !private "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
+- !private "VSs5UInt8"
+- !private "Sc"
+- !private "PSs31UnicodeScalarLiteralConvertible"
+- "C16ROBarcodeScanner14ViewController"
+- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "PSs32_BuiltinStringLiteralConvertible"
+- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
+- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs16_CocoaStringType"
+- !private "PSs21_ObjectiveCBridgeable"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+interface-hash: "4698dd3b511e02069bab826a39b05c84"
