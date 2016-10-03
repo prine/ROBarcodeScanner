@@ -18,19 +18,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        barcodeScanner = self.storyboard!.instantiateViewControllerWithIdentifier("ROBarcodeScannerViewControllerScene") as? ROBarcodeScannerViewController
+        barcodeScanner = self.storyboard!.instantiateViewController(withIdentifier: "ROBarcodeScannerViewControllerScene") as? ROBarcodeScannerViewController
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func scanClicked() {
         barcodeScanner?.barcodeScanned = { (barcode:String) in
-            self.navigationController?.popViewControllerAnimated(true)
+            _ = self.navigationController?.popViewController(animated: true)
             print("Received following barcode: \(barcode)")
 
-            dispatch_async(dispatch_get_main_queue(),{
+           DispatchQueue.main.async {
                 self.scanResult.text = "\(barcode)"
-            })
+            }
         }
         
         if let barcodeScanner = self.barcodeScanner {

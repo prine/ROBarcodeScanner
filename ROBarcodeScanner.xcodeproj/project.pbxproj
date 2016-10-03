@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CBD062321B6233ED002A5F18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062311B6233ED002A5F18 /* AppDelegate.swift */; };
 		CBD062391B6233ED002A5F18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD062381B6233ED002A5F18 /* Images.xcassets */; };
-		CBD0623C1B6233ED002A5F18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */; };
 		CBD062481B6233ED002A5F18 /* ROBarcodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062471B6233ED002A5F18 /* ROBarcodeScannerTests.swift */; };
 		CBD062541B626BFE002A5F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD062531B626BFE002A5F18 /* ViewController.swift */; };
 		CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CBD062571B6282D7002A5F18 /* LICENSE */; };
@@ -34,7 +33,6 @@
 		CBD062301B6233ED002A5F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD062311B6233ED002A5F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD062381B6233ED002A5F18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CBD0623B1B6233ED002A5F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CBD062411B6233ED002A5F18 /* ROBarcodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROBarcodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD062461B6233ED002A5F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD062471B6233ED002A5F18 /* ROBarcodeScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROBarcodeScannerTests.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				CBD062311B6233ED002A5F18 /* AppDelegate.swift */,
 				CBD062531B626BFE002A5F18 /* ViewController.swift */,
 				CBD062381B6233ED002A5F18 /* Images.xcassets */,
-				CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */,
 				CBD0625D1B6287C1002A5F18 /* Source */,
 				CBD0622F1B6233ED002A5F18 /* Supporting Files */,
 			);
@@ -180,15 +177,18 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "RASCOR International AG";
 				TargetAttributes = {
 					CBD0622B1B6233ED002A5F18 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = PKS2D9PECG;
+						DevelopmentTeam = 39J9X3JBYC;
+						LastSwiftMigration = 0800;
 					};
 					CBD062401B6233ED002A5F18 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 39J9X3JBYC;
+						LastSwiftMigration = 0800;
 						TestTargetID = CBD0622B1B6233ED002A5F18;
 					};
 				};
@@ -217,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD0623C1B6233ED002A5F18 /* LaunchScreen.xib in Resources */,
 				CBD062601B6287DC002A5F18 /* ROBarcodeScanner.storyboard in Resources */,
 				CBD0625C1B6282D7002A5F18 /* ROBarcodeScanner.podspec in Resources */,
 				CBD0625A1B6282D7002A5F18 /* LICENSE in Resources */,
@@ -264,17 +263,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		CBD0623A1B6233ED002A5F18 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBD0623B1B6233ED002A5F18 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		CBD062491B6233ED002A5F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -289,8 +277,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -335,8 +325,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -355,6 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -365,10 +358,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 39J9X3JBYC;
 				INFOPLIST_FILE = ROBarcodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rascor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -377,10 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 39J9X3JBYC;
 				INFOPLIST_FILE = ROBarcodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rascor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -388,10 +387,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 39J9X3JBYC;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -400,6 +397,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rascor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ROBarcodeScanner.app/ROBarcodeScanner";
 			};
 			name = Debug;
@@ -408,14 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 39J9X3JBYC;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ROBarcodeScannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rascor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ROBarcodeScanner.app/ROBarcodeScanner";
 			};
 			name = Release;
@@ -430,7 +427,7 @@
 				CBD0624A1B6233ED002A5F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CBD0624B1B6233ED002A5F18 /* Build configuration list for PBXNativeTarget "ROBarcodeScanner" */ = {
 			isa = XCConfigurationList;
@@ -439,7 +436,7 @@
 				CBD0624D1B6233ED002A5F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CBD0624E1B6233ED002A5F18 /* Build configuration list for PBXNativeTarget "ROBarcodeScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -448,7 +445,7 @@
 				CBD062501B6233ED002A5F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

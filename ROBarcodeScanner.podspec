@@ -32,6 +32,6 @@ s.resource_bundles = {
 s.resources = ["Source/*.Storyboard"]
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
+s.frameworks = 'UIKit', 'AVFoundation'
 # s.dependency 'AFNetworking', '~> 2.3'
 end
