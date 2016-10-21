@@ -12,7 +12,6 @@ Pod::Spec.new do |spec|
     spec.name         = 'ROBarcodeScanner'
     spec.version      = '2.1.0'
     spec.license      = { :type => 'MIT' }
-    spec.screenshots  = 'https://raw.githubusercontent.com/prine/ROBarcodeScanner/master/Screenshot.png'
     spec.homepage     = 'https://github.com/prine/ROBarcodeScanner'
     spec.authors      = { 'Robin Oster' => 'robin.oster@rascor.com' }
     spec.summary      = 'Scans different Barcodes and returns the result as String'

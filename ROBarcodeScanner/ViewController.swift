@@ -19,12 +19,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         barcodeScanner = self.storyboard!.instantiateViewController(withIdentifier: "ROBarcodeScannerViewControllerScene") as? ROBarcodeScannerViewController
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func scanClicked() {
+        
+        // Define the callback which is executed when the barcode has been scanned
         barcodeScanner?.barcodeScanned = { (barcode:String) in
+            
+            // When the screen is tapped, return to first view (barcode is beeing passed as param)
             _ = self.navigationController?.popViewController(animated: true)
             print("Received following barcode: \(barcode)")
 
@@ -32,7 +34,8 @@ class ViewController: UIViewController {
                 self.scanResult.text = "\(barcode)"
             }
         }
-        
+
+        // Push the ViewController when you want to scan something
         if let barcodeScanner = self.barcodeScanner {
             self.navigationController?.pushViewController(barcodeScanner, animated: true)
         }

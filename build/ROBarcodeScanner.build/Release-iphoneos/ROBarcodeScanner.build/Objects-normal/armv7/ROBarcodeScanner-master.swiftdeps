@@ -1,7 +1,0 @@
-version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
-options: "c7191809baf6cadfcf98bf56e72e0cca"
-build_time: [496244597, 492143000]
-inputs: 
-	"/Users/prine/Coding/iPhoneApps/Rascor/Frameworks/ROBarcodeScanner/Source/ROBarcodeScannerViewController.swift": [496231229, 0]
-	"/Users/prine/Coding/iPhoneApps/Rascor/Frameworks/ROBarcodeScanner/ROBarcodeScanner/ViewController.swift": [496231229, 0]
-	"/Users/prine/Coding/iPhoneApps/Rascor/Frameworks/ROBarcodeScanner/ROBarcodeScanner/AppDelegate.swift": [491043053, 0]
