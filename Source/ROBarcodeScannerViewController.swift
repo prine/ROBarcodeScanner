@@ -25,71 +25,76 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
     
     public var barcodeScanned:((String) -> ())?
     
-    private var allowedTypes = [AVMetadataObjectTypeUPCECode,
-        AVMetadataObjectTypeCode39Code,
-        AVMetadataObjectTypeCode39Mod43Code,
-        AVMetadataObjectTypeEAN13Code,
-        AVMetadataObjectTypeEAN8Code,
-        AVMetadataObjectTypeCode93Code,
-        AVMetadataObjectTypeCode128Code,
-        AVMetadataObjectTypePDF417Code,
-        AVMetadataObjectTypeQRCode,
-        AVMetadataObjectTypeAztecCode]
+    private var allowedTypes = [AVMetadataObject.ObjectType.upce,
+                                AVMetadataObject.ObjectType.code39,
+                                AVMetadataObject.ObjectType.code39Mod43,
+                                AVMetadataObject.ObjectType.ean13,
+                                AVMetadataObject.ObjectType.ean8,
+                                AVMetadataObject.ObjectType.code93,
+                                AVMetadataObject.ObjectType.code128,
+                                AVMetadataObject.ObjectType.pdf417,
+                                AVMetadataObject.ObjectType.qr,
+                                AVMetadataObject.ObjectType.aztec]
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
         // Retrieve the default capturing device for using the camera
-        self.captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        self.captureDevice = AVCaptureDevice.default(for: .video)
         
         // Get an instance of the AVCaptureDeviceInput class using the previous device object.
         var error:NSError?
         let input: AnyObject!
         do {
-            input = try AVCaptureDeviceInput(device:captureDevice)
+            if let captureDevice = self.captureDevice {
+                input = try AVCaptureDeviceInput(device: captureDevice)
+                
+                if (error != nil) {
+                    // If any error occurs, simply log the description of it and don't continue any more.
+                    print("\(String(describing: error?.localizedDescription))")
+                    return
+                }
+                
+                // Initialize the captureSession object and set the input device on the capture session.
+                captureSession = AVCaptureSession()
+                captureSession?.addInput(input as! AVCaptureInput)
+                
+                // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
+                let captureMetadataOutput = AVCaptureMetadataOutput()
+                captureSession?.addOutput(captureMetadataOutput)
+                
+                // Set delegate and use the default dispatch queue to execute the call back
+                captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+                captureMetadataOutput.metadataObjectTypes = self.allowedTypes
+                
+                // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
+                
+                if let captureSession = captureSession {
+                    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                    videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resize
+                    videoPreviewLayer?.frame = videoView.layer.bounds
+                    videoView.layer.addSublayer(videoPreviewLayer!)
+                    
+                    // Start video capture.
+                    captureSession.startRunning()
+                    
+                    // Move the message label to the top view
+                    view.bringSubviewToFront(messageLabel)
+                    
+                    // Initialize QR Code Frame to highlight the QR code
+                    qrCodeFrameView = UIView()
+                    qrCodeFrameView?.layer.borderColor = UIColor.red.cgColor
+                    qrCodeFrameView?.layer.borderWidth = 2
+                    qrCodeFrameView?.autoresizingMask = [UIView.AutoresizingMask.flexibleTopMargin, UIView.AutoresizingMask.flexibleBottomMargin, UIView.AutoresizingMask.flexibleLeftMargin, UIView.AutoresizingMask.flexibleRightMargin]
+                    
+                    view.addSubview(qrCodeFrameView!)
+                    view.bringSubviewToFront(qrCodeFrameView!)
+                }
+            }
         } catch let error1 as NSError {
             error = error1
             input = nil
         }
-        
-        if (error != nil) {
-            // If any error occurs, simply log the description of it and don't continue any more.
-            print("\(error?.localizedDescription)")
-            return
-        }
-        
-        // Initialize the captureSession object and set the input device on the capture session.
-        captureSession = AVCaptureSession()
-        captureSession?.addInput(input as! AVCaptureInput)
-        
-        // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
-        let captureMetadataOutput = AVCaptureMetadataOutput()
-        captureSession?.addOutput(captureMetadataOutput)
-        
-        // Set delegate and use the default dispatch queue to execute the call back
-        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-        captureMetadataOutput.metadataObjectTypes = self.allowedTypes
-        
-        // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
-        videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravityResize
-        videoPreviewLayer?.frame = videoView.layer.bounds
-        videoView.layer.addSublayer(videoPreviewLayer!)
-        
-        // Start video capture.
-        captureSession?.startRunning()
-        
-        // Move the message label to the top view
-        view.bringSubview(toFront: messageLabel)
-        
-        // Initialize QR Code Frame to highlight the QR code
-        qrCodeFrameView = UIView()
-        qrCodeFrameView?.layer.borderColor = UIColor.red.cgColor
-        qrCodeFrameView?.layer.borderWidth = 2
-        qrCodeFrameView?.autoresizingMask = [UIViewAutoresizing.flexibleTopMargin, UIViewAutoresizing.flexibleBottomMargin, UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleRightMargin]
-        
-        view.addSubview(qrCodeFrameView!)
-        view.bringSubview(toFront:qrCodeFrameView!)
     }
     
     public override func viewWillLayoutSubviews() {
@@ -99,21 +104,23 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         
         let orientation = UIApplication.shared.statusBarOrientation
         
-        switch(orientation) {
-        case UIInterfaceOrientation.landscapeLeft:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
-            
-        case UIInterfaceOrientation.landscapeRight:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
-            
-        case UIInterfaceOrientation.portrait:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
-            
-        case UIInterfaceOrientation.portraitUpsideDown:
-            videoPreviewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
-            
-        default:
-            print("Unknown orientation state")
+        if let videoPreviewLayer = self.videoPreviewLayer {
+            switch(orientation) {
+            case UIInterfaceOrientation.landscapeLeft:
+                videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+                
+            case UIInterfaceOrientation.landscapeRight:
+                videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.landscapeRight
+                
+            case UIInterfaceOrientation.portrait:
+                videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+                
+            case UIInterfaceOrientation.portraitUpsideDown:
+                videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
+                
+            default:
+                print("Unknown orientation state")
+            }
         }
     }
     
@@ -125,10 +132,12 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
         videoPreviewLayer?.frame = videoView.layer.bounds
     }
     
-    public func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+    // DIFFERENT FUNCTION, i fixed in maybe rascor?!
+    // func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection)
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
-        if metadataObjects == nil || metadataObjects.count == 0 {
+        if metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR code is detected"
             return
@@ -147,7 +156,7 @@ public class ROBarcodeScannerViewController: UIViewController, AVCaptureMetadata
                 messageLabel.text = metadataObj.stringValue
                 lastCapturedCode = metadataObj.stringValue
                 
-                print("Scanned barcode: \(metadataObj.stringValue)")
+                print("Scanned barcode: \(String(describing: metadataObj.stringValue))")
             }
         }
     }
