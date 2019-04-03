@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |spec|
     spec.name         = 'ROBarcodeScanner'
-    spec.version      = '2.1.0'
+    spec.version      = '2.2.0'
     spec.license      = { :type => 'MIT' }
     spec.homepage     = 'https://github.com/prine/ROBarcodeScanner'
     spec.authors      = { 'Robin Oster' => 'robin.oster@rascor.com' }
