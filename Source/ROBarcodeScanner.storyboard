@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pFx-BT-zJm">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pFx-BT-zJm">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment version="2352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -10,7 +14,7 @@
             <objects>
                 <navigationController id="pFx-BT-zJm" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dK4-Av-R1q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,25 +34,25 @@
                         <viewControllerLayoutGuide type="bottom" id="ziJ-uF-Vt4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1i6-JI-MmH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-rl-gl2">
-                                <rect key="frame" x="213" y="275" width="175" height="49"/>
+                                <rect key="frame" x="100" y="381.66666666666669" width="175" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="Ob3-xm-mQl"/>
                                     <constraint firstAttribute="height" constant="49" id="v9a-6m-qK4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="47"/>
                                 <state key="normal" title="SCAN">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="scanClicked" destination="Bxo-5K-Tdo" eventType="touchUpInside" id="Y13-2W-cQ6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show the scan results here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SK-Z7-wvR">
-                                <rect key="frame" x="164" y="332" width="273" height="21"/>
+                                <rect key="frame" x="51" y="438.66666666666669" width="273" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="g19-Oe-FRf"/>
                                     <constraint firstAttribute="width" constant="273" id="kE6-sz-bMd"/>
@@ -58,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1SK-Z7-wvR" firstAttribute="centerX" secondItem="1i6-JI-MmH" secondAttribute="centerX" id="C2M-yJ-0os"/>
                             <constraint firstItem="1SK-Z7-wvR" firstAttribute="top" secondItem="Ogs-rl-gl2" secondAttribute="bottom" constant="8" id="hTg-kQ-one"/>
@@ -85,33 +89,33 @@
                         <viewControllerLayoutGuide type="bottom" id="kmj-Iv-XJu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xUh-U2-jvu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrK-4r-qSU">
-                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="738" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="970-NP-Ey0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhl-66-tHJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="738"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="hhl-66-tHJ" firstAttribute="top" secondItem="xUh-U2-jvu" secondAttribute="top" id="17f-7G-LgT"/>
                             <constraint firstItem="mrK-4r-qSU" firstAttribute="leading" secondItem="xUh-U2-jvu" secondAttribute="leading" id="1Uh-2d-V1l"/>
-                            <constraint firstItem="hhl-66-tHJ" firstAttribute="top" secondItem="xUh-U2-jvu" secondAttribute="top" id="2ac-Sb-S4B"/>
                             <constraint firstAttribute="trailing" secondItem="mrK-4r-qSU" secondAttribute="trailing" id="5fu-a1-Tdb"/>
-                            <constraint firstItem="mrK-4r-qSU" firstAttribute="leading" secondItem="hhl-66-tHJ" secondAttribute="leading" id="GWE-gg-TQn"/>
-                            <constraint firstItem="mrK-4r-qSU" firstAttribute="top" secondItem="hhl-66-tHJ" secondAttribute="bottom" id="MD2-zu-wcU"/>
-                            <constraint firstItem="hhl-66-tHJ" firstAttribute="trailing" secondItem="mrK-4r-qSU" secondAttribute="trailing" id="cvU-VC-KCI"/>
+                            <constraint firstItem="hhl-66-tHJ" firstAttribute="leading" secondItem="mrK-4r-qSU" secondAttribute="leading" id="LA7-Vl-L4m"/>
+                            <constraint firstItem="hhl-66-tHJ" firstAttribute="trailing" secondItem="mrK-4r-qSU" secondAttribute="trailing" id="WW3-bQ-0bF"/>
+                            <constraint firstItem="mrK-4r-qSU" firstAttribute="top" secondItem="hhl-66-tHJ" secondAttribute="bottom" id="bhW-GK-HVR"/>
                             <constraint firstItem="mrK-4r-qSU" firstAttribute="bottom" secondItem="kmj-Iv-XJu" secondAttribute="top" id="dbO-sq-7yo"/>
                         </constraints>
                     </view>
